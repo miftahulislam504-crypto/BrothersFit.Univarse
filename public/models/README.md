@@ -19,6 +19,6 @@ CC0 1.0 Universal license, মাত্র ১৬৬ polygon (অত্যন্
 
 যদি ভিন্ন কিছু পছন্দ হয়, Sketchfab-এ "downloadable" + "CC0" filter দিয়ে খুঁজলে আরো option পাবে: https://sketchfab.com/tags/clothes-rack — শুধু license CC0 বা CC-BY আছে কিনা চেক করে নিও (CC-BY-SA হলে attribution লাগবে)।
 
-## এরপর কী
+## এরপর   কি
 
 ফাইল রাখার পর আমাকে বলো — আমি কোডে `useGLTF` দিয়ে এটা লোড করে hall-এর architecture-এ বসিয়ে দেব।
