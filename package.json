@@ -1,0 +1,46 @@
+{
+  "name": "brotherfit-universe",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "15.5.19",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "three": "0.181.1",
+    "@react-three/fiber": "9.4.0",
+    "@react-three/drei": "10.7.7",
+    "@react-three/postprocessing": "3.0.4",
+    "postprocessing": "6.38.0",
+    "gsap": "3.12.5",
+    "framer-motion": "11.15.0",
+    "zustand": "5.0.2",
+    "firebase": "11.1.0",
+    "lucide-react": "0.469.0",
+    "clsx": "2.1.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "@types/node": "^22.10.2",
+    "@types/react": "19.2.4",
+    "@types/react-dom": "19.2.3",
+    "@types/three": "0.181.0",
+    "postcss": "^8.4.49",
+    "autoprefixer": "^10.4.20",
+    "tailwindcss": "^3.4.17",
+    "eslint": "^9.17.0",
+    "eslint-config-next": "15.5.19"
+  },
+  "overrides": {
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}
