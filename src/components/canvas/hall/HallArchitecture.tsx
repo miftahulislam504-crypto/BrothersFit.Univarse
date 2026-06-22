@@ -39,7 +39,11 @@ interface HallArchitectureProps {
  * শুধু rack model-টা optional, real asset লাগে।
  */
 function CoatRackModel({ position }: { position: [number, number, number] }) {
-  const { scene } = useGLTF("/models/coat-rack.glb");
+  // Sketchfab glTF format-এ download হয়েছে — single .glb না।
+  // folder: public/models/coat-rack.glb/scene.gltf + scene.bin + textures/
+  // Next.js public/ থেকে এই path সঠিকভাবে serve হয়,
+  // scene.bin আর textures/ আপনা-আপনি relative path-এ resolve হয়।
+  const { scene } = useGLTF("/models/coat-rack.glb/scene.gltf");
   return <primitive object={scene.clone()} position={position} scale={1} />;
 }
 
