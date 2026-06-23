@@ -1,4 +1,4 @@
-"use client";
+use client";
 
 import { Suspense, useCallback, useState } from "react";
 import { Canvas } from "@react-three/fiber";
@@ -12,7 +12,6 @@ import ExteriorLights from "./exterior/ExteriorLights";
 import WetPavement from "./exterior/WetPavement";
 import ExteriorCameraRig from "./exterior/ExteriorCameraRig";
 import { SafeAsset } from "./SafeAsset";
-import SceneBloom from "./effects/SceneBloom";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
 import { useUniverseStore } from "@/store/useUniverseStore";
 
@@ -123,16 +122,6 @@ export default function ExteriorCanvas() {
 
           <AdaptiveDpr pixelated />
           <AdaptiveEvents />
-
-          {/* Step 6: Bloom — desktop only।
-              threshold 0.75 → NeonSign-এর ember bar (#ff3d1a meshBasicMaterial)
-              আর cyan accent ধরবে। intensity 0.55 — রাতের neon real-এ এভাবেই
-              আলো ছড়ায়, একটু বেশি spread স্বাভাবিক। */}
-          <SceneBloom
-            isMobile={isMobile}
-            luminanceThreshold={0.75}
-            intensity={0.55}
-          />
         </Canvas>
       </div>
 
