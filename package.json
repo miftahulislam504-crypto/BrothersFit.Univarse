@@ -13,12 +13,12 @@
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "three": "0.181.1",
-    "@react-three/fiber": "8.17.10",
+    "@react-three/fiber": "9.4.0",
     "@react-three/drei": "10.7.7",
     "@react-three/postprocessing": "3.0.4",
     "postprocessing": "6.38.0",
     "gsap": "3.12.5",
-    "framer-motion": "11.15.0",
+    "framer-motion": "12.40.0",
     "zustand": "5.0.2",
     "firebase": "11.1.0",
     "lucide-react": "0.469.0",
@@ -38,7 +38,8 @@
   },
   "overrides": {
     "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "react-dom": "19.2.0",
+    "react-reconciler": "0.32.0"
   },
   "engines": {
     "node": ">=18.18.0"
