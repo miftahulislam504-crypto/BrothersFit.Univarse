@@ -11,22 +11,19 @@ const nextConfig = {
     ],
   },
 
-  webpack: (config, { isServer }) => {
+  serverExternalPackages: [
+    "three",
+    "@react-three/fiber",
+    "@react-three/drei",
+    "@react-three/postprocessing",
+    "postprocessing",
+  ],
+
+  webpack: (config) => {
     config.module.rules.push({
       test: /\.(glb|gltf|hdr|exr)$/,
       type: "asset/resource",
     });
-
-    if (isServer) {
-      config.externals = [
-        ...(config.externals || []),
-        "three",
-        "@react-three/fiber",
-        "@react-three/drei",
-        "@react-three/postprocessing",
-      ];
-    }
-
     return config;
   },
 
