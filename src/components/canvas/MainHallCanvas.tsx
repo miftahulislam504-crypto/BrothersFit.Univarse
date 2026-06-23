@@ -11,7 +11,6 @@ import HallDust from "./hall/HallDust";
 import HallLayout from "./hall/HallLayout";
 import HallCameraRig from "./hall/HallCameraRig";
 import { SafeAsset } from "./SafeAsset";
-import SceneBloom from "./effects/SceneBloom";
 import MiniMap from "@/components/ui/hall/MiniMap";
 import ZoneInfoPanel from "@/components/ui/hall/ZoneInfoPanel";
 import TopNavBar from "@/components/ui/nav/TopNavBar";
@@ -156,16 +155,9 @@ export default function MainHallCanvas() {
 
           <AdaptiveDpr pixelated />
           <AdaptiveEvents />
-
-          {/* Step 6: Bloom — desktop only, mobile-এ null রিটার্ন করে (zero cost)।
-              threshold 0.85 → শুধু ছাদের LED ring (emissiveIntensity 2.2),
-              pedestal glow ring, আর emblem ring bloom করবে।
-              ambient light বা wall material bloom করবে না। */}
-          <SceneBloom
-            isMobile={isMobile}
-            luminanceThreshold={0.85}
-            intensity={0.45}
-          />
+          {/* Step 6 Bloom বন্ধ — @react-three/postprocessing 3.0.4 React 19-এর
+              সাথে compatible না (ReactCurrentBatchConfig crash)। পরে package
+              update হলে SceneBloom আবার যোগ করা যাবে। */}
         </Canvas>
       </div>
 
