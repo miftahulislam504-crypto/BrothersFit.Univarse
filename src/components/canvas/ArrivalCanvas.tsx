@@ -4,7 +4,6 @@ import { Suspense, useState, useCallback } from "react";
 import { Canvas } from "@react-three/fiber";
 import { AdaptiveDpr, AdaptiveEvents, Environment } from "@react-three/drei";
 import { motion, AnimatePresence } from "framer-motion";
-import SceneBloom from "./effects/SceneBloom";
 import ParticleField from "./ParticleField";
 import EmberParticles from "./EmberParticles";
 import CameraRig from "./CameraRig";
@@ -90,16 +89,6 @@ export default function ArrivalCanvas() {
           )}
           <AdaptiveDpr pixelated />
           <AdaptiveEvents />
-
-          {/* Step 6: Bloom — desktop only।
-              threshold 0.7 → EmberParticles (#ff3d1a) আর cyan streak-এর
-              saturated color range ধরবে। intensity 0.35 — হালকা, particle
-              field-এ বেশি bloom হলে দেখতে overexposed লাগে। */}
-          <SceneBloom
-            isMobile={isMobile}
-            luminanceThreshold={0.7}
-            intensity={0.35}
-          />
         </Canvas>
       </div>
 
