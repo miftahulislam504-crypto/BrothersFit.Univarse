@@ -26,13 +26,6 @@ const nextConfig = {
     });
     return config;
   },
-
-  transpilePackages: [
-    "three",
-    "@react-three/fiber",
-    "@react-three/drei",
-    "@react-three/postprocessing",
-  ],
 };
 
 module.exports = nextConfig;
